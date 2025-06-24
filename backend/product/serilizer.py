@@ -4,15 +4,11 @@ from .models import Product
 
 class MyProductSerilizer(ModelSerializer):
     tax=serializers.Serializer(read_only=True)
-    id=serializers.Serializer(read_only=True)
     class Meta:
+        
+        def get_tax(self,obj):
+            return 12.3
         model=Product
         fields=[
             'id','title','content','price','tax',
         ]
-    def get_id(self,obj):
-        print(obj.id)
-        return obj.id
-    def get_tax(self,obj):
-        return 12.3
-    

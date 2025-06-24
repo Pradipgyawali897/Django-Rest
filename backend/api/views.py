@@ -26,3 +26,4 @@ class RetriveDestroyUpdateApiview(generics.RetrieveUpdateDestroyAPIView):
 # class ProductListView(generics.ListAPIView):
 #     queryset=Product.objects.all()
 #     serializer_class=MyProductSerilizer
+
